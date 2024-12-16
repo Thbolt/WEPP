@@ -1,0 +1,14 @@
+for i in range(1,6,1):  
+    j = 5
+    j -= i
+    print(j*"-"+i*"*")
+
+
+
+
+this will print:
+----*
+---**
+--***
+-****
+*****
