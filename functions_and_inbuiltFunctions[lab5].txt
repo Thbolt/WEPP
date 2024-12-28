@@ -1,0 +1,88 @@
+'''
+def div(a,b):
+    c = a / b
+    return c
+first = float(input("Enter the number that you want to divide: "))
+second = float(input("Enter the number you want to divide with: "))
+answer = div(first,second)
+print("Your answer is: "+str(answer))
+'''
+-------------------------------------------------------------------------------------
+
+Enter the number that you want to divide: 10
+Enter the number you want to divide with: 5
+Your answer is: 2.0
+
+
+
+
+
+
+'''
+def sqr(x):
+    ans = x * x
+    return ans
+numb = float(input("Enter the number:"))
+answer = sqr(numb)
+print("Your answer is: "+str(answer))
+'''
+-------------------------------------------------------------------------------------
+
+Enter the number:4
+Your answer is: 16.0
+
+
+
+
+
+'''
+demo = []
+for i in range(1,6,1):
+    numb = float(input(f"Enter number {i}: "))
+    demo.append(numb)
+maxval = max(demo)
+minval = min(demo)
+print("The maximum value is: "+str(maxval))
+print("The minimum value is: "+str(minval))
+'''
+-------------------------------------------------------------------------------------
+
+Enter number 1: 1
+Enter number 2: 2
+Enter number 3: 3
+Enter number 4: 4
+Enter number 5: 5
+The maximum value is: 5.0
+The minimum value is: 1.0
+
+
+
+
+
+'''
+name = str(input("Enter a String: "))
+lname = name.lower()
+print("String with lowercase is: "+lname)
+'''
+-------------------------------------------------------------------------------------
+
+Enter a String: SAD
+String with lowercase is: sad
+
+
+
+
+
+'''
+num = int(input("Enter a number: "))
+x = lambda num: "You have entered the number zero" if num == 0 else("You have entered an positive number" if num > 0 else "You have entered an negative number") 
+print(x(num))
+'''
+-------------------------------------------------------------------------------------
+
+Enter a number: 1
+You have entered an positive number
+
+
+
+

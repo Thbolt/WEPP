@@ -1,0 +1,89 @@
+'''
+for i in range(1,11,1):
+    print("All Natural Numbers from 1 to 10 are: ")
+    print(i)
+'''
+
+'''
+string = str(input("Enter a String: "))
+temp2 = ""
+for i in range(len(string)-1,-1,-1):
+    temp2 += string[i]
+if temp2 == string:
+    print(f"The String \'{string}\' is Palindrome.")
+else:
+    print(f"The String \'{string}\' is not Palindrome.")
+'''
+
+'''
+inputNumber = str(input("Enter a number: "))
+finalNumber = 0
+for i in inputNumber:
+    convertInt = int(i)
+    tempVar = convertInt**3
+    finalNumber+=tempVar
+
+if inputNumber == str(finalNumber):
+    print(f"The Given Number {inputNumber} is ArmStrong.")
+else:
+    print(f"The Given Number {inputNumber} is not Armstrong.")
+'''
+
+'''
+x = 0
+y = 1
+limit_ = int(input("Enter the limit of fibonacci series: "))
+print(x)
+def fib(x, y):
+    print(y)
+    z = x + y 
+    if z < limit_:
+        fib(y,z)
+fib(x,y)
+'''
+
+'''
+import re
+specialchar = re.compile('[@_!#$%^&*()<>?/\|}{~:+-]')
+passw = str(input("Enter a Password: "))
+def isPasswordValid(password):
+    chk = 0
+    requirestr = ""    
+    if len(password) > 8 or len(password) == 8:
+        chk += 1
+        print("Length is good.")
+        if bool(re.search(r'[ ]',password)) != True:
+            chk += 1
+        else:
+            requirestr += "\nThe Password should not contain any blank spaces."
+        if specialchar.search(password) != None:
+            chk += 1
+            print("Contains special character.")
+        else:
+            requirestr += "\nThe Password must contain atleast one Special Character."
+        if bool(re.search(r'[a-z]',password)) == True:
+            chk += 1
+            print("Contains a lower case letter.")
+        else:
+            requirestr += "\nThe Password must contain atleast one lowercase letter."
+        if bool(re.search(r'[A-Z]',password)) == True:
+            print("Contains a Upper case letter.")
+            chk += 1
+        else:
+            requirestr += "\nThe Password must contain atleast one uppercase letter."
+    else:
+        requirestr += "\nThe length of the password should be atleast 8 characters."
+    
+    if chk > 4 or chk == 4:
+        print("Your Password is Valid and Strong.")
+    elif chk > 0 and chk < 4:
+        print("Your Password is Valid but not Strong.")
+    else:
+        print("Invalid Password.")
+    print(chk)
+    if len(requirestr) != 0:
+        print(f"Recommendations: {requirestr}")
+    else:
+        print(f"Recommendations: \nNo Recommendations.")
+isPasswordValid(passw)
+'''

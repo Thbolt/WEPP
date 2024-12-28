@@ -1,0 +1,67 @@
+'''
+state = True
+demo_dict = {}
+while state:
+    key = str(input("Enter Student Name: "))
+    if key == "":
+        state = False
+    else:
+        value = int(input("Enter Value: "))
+        demo_dict[key]=value
+print(demo_dict)
+'''
+
+'''
+dict1 = {1:10,2:20}
+dict2 = {3:30,4:40}
+dict3 = {5:50,6:60}
+dict4 = {}
+dict4.update(dict1)
+dict4.update(dict2)
+dict4.update(dict3)
+print(f"Dictionary 1: {dict1}")
+print(f"Dictionary 2: {dict2}")
+print(f"Dictionary 3: {dict3}")
+print(f"Final Dictionary: {dict4}")
+'''
+
+'''
+#main dictionary dor storing multiple employee data
+employee = {}
+
+#function to get data of employee and store them in the dictionary
+def data(x):   
+    name_ = input(f"Enter Employee{x} Name: ")
+    no_ = input(f"Enter Employee{x} Number: ")
+    id_ = input(f"Enter Employee{x} ID: ")
+    dept_ = input(f"Enter Employee{x} Department: ")
+    des_ = input(f"Enter Employee{x} Designation: ")
+    doj_ = input(f"Enter Employee{x} Date of Joining[dd-mm-yyyy]: ")
+    dob_ = input(f"Enter Employee{x} Date of Birth[dd-mm-yyyy]: ")
+    Sal_ = input(f"Enter Employee{x} Salary: ")
+
+    #appending unique employee data in the dictionary with their id as suffix
+    employee[id_] = {
+        "Name" : name_,
+        "Number" : no_,
+        "Department" : dept_,
+        "Designation" : des_,
+        "DOJ" : doj_,
+        "DOB" : dob_,
+        "Salary" : Sal_
+    }
+
+#total number of employees
+numOfEmp = int( input("Enter Total Number of Employees: "))
+
+#iterating function to number of employees
+for i in range(1,numOfEmp+1,1):
+    data(i)
+
+#displaying the stored information
+for id_, details in employee.items():
+    print("-"*30)
+    print(f"Employee ID: {id_}")
+    for key, value in details.items():
+        print(f"{key} : {value}")
+''' 

@@ -1,0 +1,61 @@
+print("Welcome to our Restaurant.....")
+
+bill = 0
+status = True
+while status:
+    choice = int(input("What would you like to have: \n1. Starter \n2.Main Course \n3.Dessert \n4.Bill Generation \nYour answer: "))
+    if choice == 1:
+        cstatus = True
+        while cstatus:
+            starter_choice = int(input("What would you like to have for Starters:\n1. Masala Papad [Rs.70 per piece] \n2. Pakode [Rs.60 per plate] \n3. Samosa [Rs.30 per piece] \n4. Spring Rolls [Rs.80 per plate] \n5.Change Meal Type \nYour answer: "))
+            if starter_choice == 1:
+                bill+= (70 * starter_choice)
+            elif starter_choice == 2:
+                bill+= (60 * starter_choice) 
+            elif starter_choice == 3:
+                bill+= (30 * starter_choice)
+            elif starter_choice == 4:
+                bill+= (80 * starter_choice)
+            elif starter_choice == 5:
+                cstatus = False
+            else:
+                print("Invalid Starter Choice.")
+    elif choice == 2:
+        mstatus = True
+        while mstatus:
+            mainCourse = int(input("What would you like to have for Main Course:\n1. Veg Thali [Rs.200 per plate] \n2. Veg Bhaji [Rs.120 per unit] \n3. Roti [Rs.30 per piece] \n4. Dal Fry [Rs.120 per unit] \n5. Rice [Rs.100 per unit] \n6.Change Meal Type \nYour answer: "))
+            if mainCourse == 1:
+                bill+= (200 * mainCourse)
+            elif mainCourse == 2:
+                bill+= (120 * mainCourse) 
+            elif mainCourse == 3:
+                bill+= (30 * mainCourse)
+            elif mainCourse == 4:
+                bill+= (120 * mainCourse)
+            elif mainCourse == 5:
+                bill+= (100 * mainCourse) 
+            elif mainCourse == 6:
+                mstatus = False
+            else:
+                print("Invalid Main Course Choice.")
+
+    elif choice == 3:
+        dstatus = True
+        while dstatus:
+            dessert = int(input("What would you like to have for Dessert:\n1. Ice-Cream [Rs.100 per Tub] \n2. Choco-Lava Cake [Rs.100 per piece] \n3. Sweet-Dish [Rs.100 per plate] \n4.Change Meal Type \nYour answer: "))
+            if dessert == 1:
+                bill+= (100 * dessert)
+            elif starter_choice == 2:
+                bill+= (100 * dessert) 
+            elif dessert == 3:
+                bill+= (100 * dessert)
+            elif dessert == 4:
+                dstatus = False
+            else:
+                print("Invalid Dessert Choice.")
+
+    elif choice == 4:
+        print(f"Yout Total Bill is: {bill}")
+        status = False
+    else:
+        print("Invalid Input")

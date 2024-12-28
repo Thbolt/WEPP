@@ -1,0 +1,90 @@
+'''
+year = int(input("Enter an Year[yyyy]: "))
+
+if (year%4 == 0):
+    print(f"The given year {year} is a Leap Year.")
+else:
+    print(f"The given year {year} is not a Leap Year.")
+'''
+
+
+'''
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+
+if(num1 > num2 and num1 > num3):
+    print(f"{num1} is Largest among the given numbers.")
+elif (num2 > num1 and num2 > num3):
+    print(f"{num2} is Largest among the given numbers.")
+else:
+    print(f"{num3} is Largest among the given numbers.")
+'''
+
+
+'''
+num = int(input("Enter a number: "))
+
+if(num>0):
+    print(f"{num} is Positive.")
+elif(num<0):
+    print(f"{num} is Negative.")
+else:
+    print(f"{num} is Zero.")
+'''
+
+
+'''
+distance = int(input("Enter the Distance: "))
+amount = 0
+if (distance > 0 and distance < 51):
+    amount = distance * 8
+elif (distance > 50 and distance < 101):
+    amount = distance * 10
+else:
+    amount = distance * 12
+print(f"You have to pay {amount} for travelling {distance} Kms.")
+'''
+
+
+
+
+'''
+print("Product codes are:\n 1 --> Battery Based Toys[Rs.100/item] \n 2 --> Key-Based Toys[Rs.50/piece] \n 3 --> Electrical Charging Based Toys[Rs.100/item]")
+product_code = int(input("Enter Product Code: "))
+
+def Battery_toys(x):
+    amount = x * 100
+    if amount > 1000:
+        amount -= amount / 10  # apply 10% discount
+    return amount
+
+def Key_toys(x):
+    amount = x * 50
+    if amount > 100:
+        amount -= amount / 20  # apply 5% discount
+    return amount
+
+def Electrical_toys(x):
+    amount = x * 100
+    if amount > 500:
+        amount -= amount / 10  # apply 10% discount
+    return amount
+
+amount = 0  # initialize total amount
+
+if product_code == 1:
+    fQ = int(input("Enter the Quantity for Battery Based Toys: "))
+    amount = Battery_toys(fQ)    
+elif product_code == 2:
+    sQ = int(input("Enter the Quantity for Key-Based Toys: "))
+    amount = Key_toys(sQ) 
+elif product_code == 3:
+    tQ = int(input("Enter the Quantity for Electrical Charging Based Toys: "))
+    amount = Electrical_toys(tQ)    
+else:
+    print("Invalid Product Code. Please enter a correct code.")
+
+if amount > 0:
+    print("Total Amount: Rs.", amount)
+'''
