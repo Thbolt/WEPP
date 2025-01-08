@@ -1,0 +1,64 @@
+'''
+string = str(input("Enter a String: "))
+vowels_dict = {'a':0,'e':0,'i':0,'o':0,'u':0}
+string_lower = string.lower()
+for i in string_lower:
+    if i in vowels_dict:
+        vowels_dict[i] += 1
+print("Total Vowels: ")
+for key,value in vowels_dict.items():
+    print(f"{key} : {value}")
+'''
+
+'''
+string = str(input("Enter a String: "))
+data = {"Characters":0,"Digits":0,"Special Symbols":0}
+symbols = "[!@#$%^&*()_+-=~`\'\":;?/<,>.|\]"
+for i in string:
+    #character check
+    if i.isalpha() == True:
+        data["Characters"] +=1
+
+    #integer check
+    elif i.isdigit() == True:
+        data["Digits"] += 1
+    
+    #special symbol check
+    elif i in symbols:
+        data["Special Symbols"] += 1
+
+print("The given string contains the following: ")
+for key, value in data.items():
+    print(f"{key} : {value}")
+'''
+
+'''
+string = str(input("Enter a String: "))
+data = {"Uppercase":0,"Lowercase":0,"Numbers":0,"Special Characters":0}
+specialSymbols = "[!@#$%^&*()_+-=~`\'\":;?/<,>.|\] "
+for i in string:
+    if i.islower() == True:
+        data["Lowercase"] += 1
+    elif i.isupper() == True:
+        data["Uppercase"] += 1
+    elif i.isdigit() == True:
+        data["Numbers"] += 1
+    elif i in specialSymbols:
+        data["Special Characters"] += 1
+
+print("The String contains the following: ")
+for key, value in data.items():
+    print(f"{key} : {value}")
+'''
+
+'''
+string = str(input("Enter a String: "))
+demo = string.split()
+temp = []
+for i in demo:
+    
+    if i not in temp:
+        temp.append(i)
+print(f"The String after removing duplicate words will be: ")
+print(*temp)
+'''

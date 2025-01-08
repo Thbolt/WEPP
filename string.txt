@@ -1,0 +1,70 @@
+'''
+string = str(input("Enter a string: "))
+
+#converting string to lower case for better counting
+string_lower = string.lower()
+
+#deciding punctuations
+punctuations = {"[","@",".",",","_","#","$","%","^","&","*","!","?",";",":","/","|","~","+","\'","}","`","(",")","{","<",">","-","]","\""}
+string_new = ""
+
+#creating new string without punctuation
+for i in string_lower:
+    if i in punctuations:
+        print(f"Removing Punctuation {i}.")
+    else:
+        string_new += i
+print(string_new)
+
+#spliting the string into list for better filtering words
+string_list = string_new.split()
+print(string_list)
+
+#dictionary for counting each word 
+count_dict = {}
+
+#updating dictionary keys with its value if already present
+for i in string_list:
+    if i not in count_dict:
+        count_dict[i] = 1
+    else:
+        count_dict[i] += 1
+
+#displaying data of dictionary
+print("Total Words with their count:")
+for key,value in count_dict.items():
+    print(f"{key} : {value}")
+'''
+
+
+'''
+string = str(input("Enter a String: "))
+s = string.replace("\\n","")
+print(s)
+'''
+
+'''
+string = str(input("Enter a String: "))
+split_string = string.split()
+new_string_list = []
+for i in split_string:
+    a = ""
+    for j in i:
+        a = j + a
+    new_string_list.append(f"{a}")
+print("Reversed String is: ")
+for i in new_string_list:
+    print(i,end=" ")
+'''
+
+'''
+string = str(input("Enter a String: "))
+vowels_dict = {'a':0,'e':0,'i':0,'o':0,'u':0}
+string_lower = string.lower()
+for i in string_lower:
+    if i in vowels_dict:
+        vowels_dict[i] += 1
+print("Total Vowels: ")
+for key,value in vowels_dict.items():
+    print(f"{key} : {value}")
+'''

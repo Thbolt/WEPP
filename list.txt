@@ -1,0 +1,74 @@
+'''
+demo_list = []
+numval = int(input("Enter total values: "))
+for i in range(0,numval,1):
+    number = int(input("Enter number: "))
+    demo_list.append(number)
+sum = sum(demo_list)
+print(f"Total sum is: {sum}")
+'''
+
+'''
+def minMax(demo_list):
+    numval = int(input("Enter Total numbers: "))
+
+    for i in range(0,numval,1):
+        num = int(input("Enter number: "))
+        demo_list.append(num)
+
+    largenum = demo_list[0]
+    smallnum = demo_list[0]
+
+    for i in demo_list:
+        if i > largenum:
+            largenum = i
+        elif i < smallnum:
+            smallnum = i
+
+    print(f"Largest Number: {largenum} and Smallest Number: {smallnum}")
+
+listForNum = []
+minMax(listForNum)
+'''
+
+'''
+demo_list = []
+duplist = []
+temp = []
+totalNum = int(input("Enter Total Values: "))
+for i in range(0,totalNum,1):
+    num = input("Enter value: ")
+    demo_list.append(num)
+for i in demo_list:
+    if i not in temp:
+        temp.append(i)
+    else:
+        duplist.append(i)
+print(f"Duplicate values: {duplist} \nNon-Duplicate values: {temp}")
+'''
+
+'''
+demo_list = []
+totalnum = int(input("Enter Total values: "))
+for i in range(0,totalnum,1):
+    num = input("Enter value: ")
+    demo_list.append(num)
+
+print(f"Original List: \n{demo_list}")
+length = int(input("Length of the first part of the list: "))
+tempA = demo_list[:length]
+tempB = demo_list[length:]
+tempC = (tempA, tempB)
+print(f"Splitted the said list into two parts: \n{tempC}")
+'''
+
+'''
+demo_list = []
+length = int(input("Enter Total Values: "))
+for i in range(0,length,1):
+    num = str(input("Enter value: "))
+    demo_list.append(num)
+print(f"Original list: \n{demo_list}\nTraverse the said list in reverse order: ")
+for i in range(len(demo_list)-1,-1,-1):
+    print(f"Element: {demo_list[i]}, Original Index: {i}")
+'''
